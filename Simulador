@@ -2,3 +2,32 @@
 **Duración máxima:** 2 horas  
 **Instrucciones:** Lea cuidadosamente cada sección, complete el desarrollo solicitado y guarde su avance de forma periódica
 https://colab.research.google.com/github/tu_usuario/tu_repo/blob/main/ruta_al_notebook.ipynb
+# EDA básico en Python – Simulador ChileValora
+
+# Paso 1: Importar librerías
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Paso 2: Crear un dataset de ejemplo
+data = {
+    'Edad': [22, 25, 47, 52, 46, 56, 55, 60],
+    'Salario': [250000, 300000, 800000, 1200000, 750000, 1100000, 1000000, 1300000],
+    'Género': ['M', 'F', 'M', 'F', 'F', 'M', 'F', 'M']
+}
+df = pd.DataFrame(data)
+
+# Paso 3: Mostrar el dataset
+print("Vista del dataset:")
+print(df)
+
+# Paso 4: Análisis estadístico básico
+print("\nEstadísticas descriptivas:")
+print(df.describe())
+
+# Paso 5: Gráfico de dispersión
+plt.scatter(df['Edad'], df['Salario'], c='green', s=70)
+plt.title('Relación entre Edad y Salario')
+plt.xlabel('Edad')
+plt.ylabel('Salario (CLP)')
+plt.grid(True)
+plt.show()
